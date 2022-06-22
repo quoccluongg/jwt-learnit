@@ -1,0 +1,49 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"quocluong03",
+    "password":"luong123123"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"quocluong03",
+    "password":"luong123123"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmIyYzhlZTIyYTFiZWQwOTg1ZTQwZTQiLCJpYXQiOjE2NTU4ODUzNzN9.SR6mXtUAhuOjPkIjV2GGEzc_0774Kda533z5uNUFU2I
+
+{
+    "skills":"Angular10",
+    "description":"Angular10 Next before ",
+    "url":"angular10.com",
+    "status":"TO LEARN"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmIyYzhlZTIyYTFiZWQwOTg1ZTQwZTQiLCJpYXQiOjE2NTU4ODYxMDl9.2_Bq_-EdNxp8hhdtRQB9IL5ZHKP_raP92AeQp3XhUQg
+
+###
+PUT http://localhost:5000/api/posts/62b2ce2984344b4d9c55f4a1
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmIyYzhlZTIyYTFiZWQwOTg1ZTQwZTQiLCJpYXQiOjE2NTU4ODYxMDl9.2_Bq_-EdNxp8hhdtRQB9IL5ZHKP_raP92AeQp3XhUQg
+
+{
+     "skills": "Angular3",
+      "description": "Angular3 after ",
+      "url": "angularjs.com",
+      "status": "LEARNED"
+} 
+
+### 
+DELETE http://localhost:5000/api/posts/62b2ce2984344b4d9c55f4a1
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmIyYzhlZTIyYTFiZWQwOTg1ZTQwZTQiLCJpYXQiOjE2NTU4ODYxMDl9.2_Bq_-EdNxp8hhdtRQB9IL5ZHKP_raP92AeQp3XhUQg
