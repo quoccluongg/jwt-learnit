@@ -2,6 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import authRouter from './routes/auth.js'
 import postRouter from './routes/post.js'
+import cors from 'cors'
 const URI = `mongodb+srv://luongdq3:luong123123@mern-learnit.hy0tnpi.mongodb.net/?retryWrites=true&w=majority`;
 
 
@@ -23,6 +24,7 @@ app.use(express.json())
 
 app.use('/api/auth',authRouter)
 app.use('/api/posts',postRouter)
+app.use(cors())
 const PORT = 5000
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
